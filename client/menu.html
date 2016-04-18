@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/styles.css" >
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+  <div class="container">
+    <div class="row">
+      <div class="one-half column" style="margin-top: 25%">
+        <h4 style="color:red">RFTM</h4>
+        <img class="main-logo" src=".\images\Race For The Moon - Logo - red.png"> </img>
+      </div>
+      <div class="one-half column" style="margin-top: 25%">
+        <div class="align-button">
+        <button class="btn" onClick="StartGame()"> Start New Game </button>
+        <button class="btn" onClick="HowToPlay()"> How - to - play </button>
+        <button class="btn" onClick="MoreAboutSR()"> More About Space Race </button>
+        <button class="btn" onClick="AboutRFTM()"> About RFTM </button>
+        </div>
+      </div>
+
+
+    </div>
+    <button class="login"  onClick="LoginForm()"> Login </button>
+    <button class="signup"  onClick="SignupForm()"> Signup </button>
+    <h4> Welcome <span class="uname"> Anonymous </span> </h4>
+    <div class="signup-game p-style"> Enter Name, Age and select which side to play on
+      <ul style="padding-left:30%; list-style-type:none">
+        <li> Name :   <input type="text" class="p-name" name="fname"> </li>
+        <li> Age  :  <br> <input type="text" class="p-age" name="age"> </li>
+        <li> email  :  <br> <input type="email" class="p-email" name="age"> </li>
+        <li> Password  :  <br> <input type="password" class="p-pwd" name="age"> </li>
+        <li> Confirm Password  :  <br> <input type="password" class="p-confirm-pwd" name="age"> </li>
+        <!-- <li> Team :   <select class="p-team">
+                <option value="USSR">USSR</option>
+                <option value="USA">USA</option>
+              </select>
+        </li> -->
+        <li> <button class="btn" style="padding-left:5%" onClick="Signup()"> Signup </button> </li>
+      </ul>
+
+    </div>
+    <div class="login-game p-style"> Login to Start Playing or if you are new user, click Signup
+      <ul style="padding-left:30%; list-style-type:none">
+
+        <li> email  :  <br> <input type="email" class="u-email" name="age"> </li>
+        <li> Password  :  <br> <input type="password" class="u-pwd" name="age"> </li>
+
+        <!-- <li> Team :   <select class="p-team">
+                <option value="USSR">USSR</option>
+                <option value="USA">USA</option>
+              </select>
+        </li> -->
+        <li> <button class="btn" style="padding-left:5%" onClick="Signin()"> Sign In </button> </li>
+      </ul>
+
+    </div>
+
+    <div class="how-to-play p-style"> Objective of the game is to manage resources either as USA or as USSR and Launch Mission <br>
+    To Launch Mission One Must have <ul> <li> Fuel </li> <li> Intelligence </li> <li> Enough Research </li>  </div>
+    <div class="more-about-SR p-style"> <p align="justify">The Space Race was a 20th-century competition between two Cold War rivals, the Soviet Union (USSR) and the United States (US), for supremacy in spaceflight capability. It had its origins in the missile-based nuclear arms race between the two nations that occurred following World War II, enabled by captured German rocket technology and personnel. The technological superiority required for such supremacy was seen as necessary for national security, and symbolic of ideological superiority.</p> </div>
+    <div class="about-rftm p-style"> RFTM is a Browser Game created with the intention of educating user on the Cold War between USSR and USA. Users can play through the Game as USSR or USA and learn as they play along</div>
+
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+<!-- JS
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ <script type="text/javascript" src="./js/jquery-1.12.0.min.js"></script>
+<script src="./js/menu.js"></script>
+</html>

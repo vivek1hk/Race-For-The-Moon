@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>RFTM</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/styles.css" >
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+    <p class="p-style-player" style="top:170px"> Player 1 &#8594;  </p>
+    <p class="p-style-player" style="top:470px"> Player 2 &#8594;  </p>
+    <p class="p-style-player" style="top:770px"> Cards Playable &#8594; </p>
+    <!-- <button class="funding-button" style="top:700px"> 5M Funding </button>
+    <button class="funding-button" style="top:780px"> 8M Funding </button>
+    <button class="funding-button" style="top:860px"> 10M Funding </button>
+    <button class="funding-button" style="top:940px"> 12M Funding </button> -->
+    <button id="next-turn-id" class="next-turn" style="top:600px"> Next Turn </button>
+    <button id="launch-turn-id" class="next-turn" style="top:650px"> Launch Now! </button>
+    <p id="turn-count"class="next-turn" style="top:750px"> Turn 1 </p>
+  <div class="container">
+
+    <div class="row">
+      <img class="main-logo-gameplay" src=".\images\Race For The Moon - Logo - red.png"> </img>
+      <div class="card-space">
+        <!-- <ul>
+          <li> Level 1</li>
+          <li> Level 2</li>
+          <li> Level 3</li>
+        </ul> -->
+        <ul id="card-deck-p2">
+
+        </ul>
+      </div>
+      <div class="card-space">
+        <!-- <ul>
+          <li> Level 1</li>
+          <li> Level 2</li>
+          <li> Level 3</li>
+        </ul> -->
+        <ul id="card-deck">
+
+        </ul>
+      </div>
+      <div class="card-space">
+        <ul id="card-list">
+          <li id="Research"><img  class="card-stack" src=".\images\USA-cards\1Re.png">   </img> </li>
+          <li id="Fuel"><img class="card-stack" src=".\images\USA-cards\1Fe.png">  </img></li>
+          <li id="Special"><img class="card-stack" src=".\images\USA-cards\1Sp.png">   </img></li>
+          <li id="Staff"><img class="card-stack" src=".\images\USA-cards\1St.png">   </img></li>
+          <li id="Astro"><img class="card-stack" src=".\images\USA-cards\1As.png">  </img></li>
+        </ul>
+
+      </div>
+      <ul>
+        <li> Research</li>
+        <li> Refuel </li>
+        <li> Special  </li>
+        <li> Staff</li>
+        <li> Astronaut </li>
+      </ul>
+
+
+    </div>
+
+
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+<!-- JS
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ <script type="text/javascript" src="./js/jquery-1.12.0.min.js"></script>
+<script src="./js/gameplay.js"></script>
+<script src="./socket.io/socket.io.js"></script>
+<script src="./js/gamelogic.js"> </script>
+<script src="./js/client.js"> </script>
+</html>
