@@ -13,9 +13,8 @@ select a team and then start playing with someone who is connected to the same n
 The game is still being built and has plenty of features pending to be added.
 
 To run thsi application locally clone or download the repository
-
-{% highlight node %}
+```
   C:\node server.js
-{% endhighlight %}
+```
 
 
