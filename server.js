@@ -12,9 +12,9 @@ io.on('connection', onConnection);
 
 app.use(express.static(__dirname + '/client'));
 
-server.listen(8080,() => console.log('Ready to work!'));
+server.listen( process.env.PORT || 8080,() => console.log('Ready to work!'));
 
 function onConnection(sock)
 {
   sock.on('msg', (deck) => sock.broadcast.emit('msg',deck))
-}
+  }
