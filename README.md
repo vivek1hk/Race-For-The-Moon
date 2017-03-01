@@ -14,7 +14,7 @@ The game is still being built and has plenty of features pending to be added.
 
 To run thsi application locally clone or download the repository
 
-`node server.js
+```node server.js
 
 
 
