@@ -6,7 +6,7 @@ var opDown= true;
 var opacity_val=1;
 rocket1Interval=window.setInterval(scrollRocket1,105);
 rocket2Interval=window.setInterval(scrollRocket2,95);
-textInterval=window.setInterval(scrollText,25);
+textInterval=window.setInterval(scrollText,55);
 opacityInterval=window.setInterval(setOpacity,90);
 
 

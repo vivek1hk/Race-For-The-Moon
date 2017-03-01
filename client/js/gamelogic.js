@@ -11,6 +11,10 @@ var funding=50;
 var research_value=0;
 var level=1;
 var card_list = $("#card-list").html();
+opacity_val=1;
+opUp=false;
+opDown=true;
+setOpacity();
 
 var funding_val={"1Re":-1,"2Re":-1,"3Re":-1,"1Fe":-1,"2Fe":-1,"3Fe":-1,"1Sp":-3,"2Sp":-2,"1St":-2,"2St":-3,"3St":-3,"4St":-3,"1As":-2,"2As":-2};
 var research_val={"1Re":0,"2Re":0,"3Re":3,"1Fe":2,"2Fe":2,"3Fe":2,"1Sp":2,"2Sp":1,"1St":0,"2St":0,"3St":5,"4St":5,"1As":4,"2As":5};
@@ -24,12 +28,16 @@ var P1_sp_points;
 $('body').on('click', 'li.deck-stack', function() {
     // do something
 
-
+    if($(this).parent().attr("id")=="card-deck")
+  {
    var id = $(this).attr('id');
+
+   console.log();
    console.log(deck);
   discardFromDeck(id);
   console.log(deck);
   $(this).remove();
+}
 
 });
 
@@ -44,7 +52,7 @@ if(count == 6)
 
 //************************************************************ Research *****************************************************
 
-$( "#Research" ).click(function() {
+$( "#card-list" ).on('click','#Research',function() {
 
 var card_temp;
 var listrng;
@@ -72,7 +80,7 @@ else {
   deck.push(card_temp);
 
   var strng=' <li id="'+card_temp+'"class="deck-stack"><img class="card-stack" src=".\\images\\USA-cards\\'+card_temp+'.png"> </img></li>';
-
+$( ".card-space" ).append( "<embed src='./mp3/Casino sound package/cardPlace1.wav' autostart='true' loop='true' width='2' height='0'>");
   $( "#card-deck").append(strng);
   $( "#Research" ).empty();
   $( "#Research" ).append(listrng);
@@ -84,7 +92,7 @@ else {
 
 //************************************************************ Fuel *****************************************************
 
-$( "#Fuel" ).click(function() {
+$( "#card-list" ).on('click','#Fuel',function() {
 
 var card_temp;
 var listrng;
@@ -112,7 +120,7 @@ else {
   deck.push(card_temp);
 
   var strng=' <li id="'+card_temp+'" class="deck-stack"><img class="card-stack" src=".\\images\\USA-cards\\'+card_temp+'.png"> </img></li>';
-
+  $( ".card-space" ).append( "<embed src='./mp3/Casino sound package/cardPlace1.wav' autostart='true' loop='true' width='2' height='0'>");
   $( "#card-deck").append(strng);
   $( "#Fuel" ).empty();
   $( "#Fuel" ).append(listrng);
@@ -124,7 +132,7 @@ else {
 
 //************************************************************ Special *****************************************************
 
-$( "#Special" ).click(function() {
+$( "#card-list" ).on('click','#Special',function() {
 
 var card_temp;
 var listrng;
@@ -151,7 +159,7 @@ else {
   deck.push(card_temp);
 
   var strng=' <li id="'+card_temp+'" class="deck-stack"><img class="card-stack" src=".\\images\\USA-cards\\'+card_temp+'.png"> </img></li>';
-
+$( ".card-space" ).append( "<embed src='./mp3/Casino sound package/cardPlace1.wav' autostart='true' loop='true' width='2' height='0'>");
   $( "#card-deck").append(strng);
   $( "#Special" ).empty();
   $( "#Special" ).append(listrng);
@@ -163,7 +171,7 @@ else {
 
 //************************************************************ Staff *****************************************************
 
-$( "#Staff" ).click(function() {
+$( "#card-list" ).on('click','#Staff',function() {
 
 var card_temp;
 var listrng;
@@ -190,7 +198,7 @@ else {
   deck.push(card_temp);
 
   var strng=' <li id="'+card_temp+'" class="deck-stack"><img class="card-stack" src=".\\images\\USA-cards\\'+card_temp+'.png"> </img></li>';
-
+$( ".card-space" ).append( "<embed src='./mp3/Casino sound package/cardPlace1.wav' autostart='true' loop='true' width='2' height='0'>");
   $( "#card-deck").append(strng);
   $( "#Staff" ).empty();
   $( "#Staff" ).append(listrng);
@@ -202,7 +210,7 @@ else {
 
 //************************************************************ Astro *****************************************************
 
-$( "#Astro" ).click(function() {
+$( "#card-list" ).on('click','#Astro',function() {
 
 var card_temp;
 var listrng;
@@ -229,7 +237,7 @@ else {
   deck.push(card_temp);
 
   var strng=' <li id="'+card_temp+'" class="deck-stack"><img class="card-stack" src=".\\images\\USA-cards\\'+card_temp+'.png"> </img></li>';
-
+$( ".card-space" ).append( "<embed src='./mp3/Casino sound package/cardPlace1.wav' autostart='true' loop='true' width='2' height='0'>");
   $( "#card-deck").append(strng);
   $( "#Astro" ).empty();
   $( "#Astro" ).append(listrng);
@@ -323,10 +331,73 @@ else {
   alert("Congratulations - You won !");
 
     window.location="./gameplay.html";
-  
+
 }
 
 
 
 
 });
+
+function setOpacity()
+{
+    if(opacity_val > 1)
+    {
+      opUp=false;
+      opDown=true;
+    }
+    if(opacity_val < 0)
+    {
+      opUp=true;
+      opDown=false;
+    }
+
+    if(opUp)
+    {
+      $("#whosturn").css({ opacity: opacity_val });
+      opacity_val = opacity_val+0.1;
+    }
+    if(opDown)
+    {
+      $("#whosturn").css({ opacity: opacity_val });
+      opacity_val = opacity_val-0.1;
+    }
+
+}
+
+function deselect(e) {
+  $('.pop').slideFadeToggle(function() {
+    e.removeClass('selected');
+  });
+}
+
+$(function() {
+  $('#contact').on('click', function() {
+    if($(this).hasClass('selected')) {
+      deselect($(this));
+    } else {
+      $(this).addClass('selected');
+      $('.pop').slideFadeToggle();
+    }
+    return false;
+  });
+
+  $('.close').on('click', function() {
+    deselect($('#contact'));
+    return false;
+  });
+});
+
+$.fn.slideFadeToggle = function(easing, callback) {
+  return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
+};
+
+function SubmitForm()
+{
+
+  alert("Answer is correct and you get 3 research points");
+  research_value+=3;
+  var listrng= "LEVEL-"+level_val[level]+" <br>Turn-"+turn_count+"<br>Total Funding="+funding+"<br>Total Research="+research_value;
+  $( "#turn-count" ).empty();
+  $( "#turn-count" ).append(listrng);
+}

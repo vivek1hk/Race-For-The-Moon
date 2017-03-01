@@ -34,20 +34,22 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="stars"></div>
   <div class="twinkling"></div>
-    <p class="p-style-player" style="top:170px"> Player 1 &#8594;  </p>
-    <p class="p-style-player" style="top:470px"> Player 2 &#8594;  </p>
-    <p class="p-style-player" style="top:770px"> Cards Playable &#8594; </p>
+
+
+
     <!-- <button class="funding-button" style="top:700px"> 5M Funding </button>
     <button class="funding-button" style="top:780px"> 8M Funding </button>
     <button class="funding-button" style="top:860px"> 10M Funding </button>
     <button class="funding-button" style="top:940px"> 12M Funding </button> -->
-    <button id="next-turn-id" class="next-turn" style="top:600px"> Next Turn </button>
-    <button id="launch-turn-id" class="next-turn" style="top:650px"> Launch Now! </button>
-    <p id="turn-count"class="next-turn" style="top:750px"> Turn 1 </p>
-  <div class="container">
+
+  <!-- <div class="container"> -->
 
     <div class="row">
-      <img class="main-logo-gameplay" src=".\images\Race For The Moon - Logo - red.png"> </img>
+      <img class="main-logo-gameplay" src=".\images\Race For The Moon - Logo - red.png" style="width:20%, height:20%"> </img>
+    </div>
+  <div class="left-half">
+    <div class="row">
+      <p id="opponent" class="p-style-player arrow-text" > OPPONENT  &#8595;  </p>
       <div class="card-space">
         <!-- <ul>
           <li> Level 1</li>
@@ -58,7 +60,8 @@
 
         </ul>
       </div>
-      <div class="card-space">
+      <p id="you" class="p-style-player arrow-text" > YOU &#8595;  </p>
+      <div class="card-space" >
         <!-- <ul>
           <li> Level 1</li>
           <li> Level 2</li>
@@ -68,7 +71,21 @@
 
         </ul>
       </div>
-      <div class="card-space">
+    </div>
+  </div>
+  <div class="right-half">
+    <div class="row">
+      <p class="p-style-player" > Cards Playable &#8595; </p>
+      <div class="card-space-large">
+
+        <ul>
+          <li> Research</li>
+          <li> Refuel </li>
+          <li> Special  </li>
+          <li> Staff</li>
+          <li> Astronaut </li>
+        </ul>
+
         <ul id="card-list">
           <li id="Research"><img  class="card-stack" src=".\images\USA-cards\1Re.png">   </img> </li>
           <li id="Fuel"><img class="card-stack" src=".\images\USA-cards\1Fe.png">  </img></li>
@@ -77,20 +94,39 @@
           <li id="Astro"><img class="card-stack" src=".\images\USA-cards\1As.png">  </img></li>
         </ul>
 
+
       </div>
-      <ul>
-        <li> Research</li>
-        <li> Refuel </li>
-        <li> Special  </li>
-        <li> Staff</li>
-        <li> Astronaut </li>
-      </ul>
+      <div class="row">
+        <ul>
+      <li style="align:center">  <p id="turn-count"class="next-turn" > "LEVEL- 1 Lunar Mission <br> Turn- 1<br>Total Funding= 50<br>Total Research= 50</p> </li>
+
+    </ul>
+            <ul>
+          <li>   <a href="/contact" class="p-style-player" id="contact" style:"position:relative, z-index:1"> <button id="next-turn-id" class="next-turn" > Next Turn </button> </a> </li>
+            <li> <p id="whosturn" class="p-style-player"> Your Turn </p> </li>
+          <li>  <button id="launch-turn-id" class="next-turn" >Launch Now</button> </li>
+        </ul>
 
 
+          </div>
     </div>
-
-
   </div>
+
+  <div class="messagepop pop">
+      <form method="" id="new_message" action="/messages">
+          <p><label for="email">What is the name of the first satellite launched by the Russians ?</label></p>
+          <p><label for="body">Answer</label><textarea rows="6" name="body" id="body" cols="35"></textarea></p>
+          <p><input class="close" type="Button" onclick="SubmitForm()" value="Submit Answer" name="commit" id="message_submit"/> or <a class="close" href="/">Give Up !</a></p>
+      </form>
+  </div>
+
+
+
+
+
+
+
+  <!-- </div> -->
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
